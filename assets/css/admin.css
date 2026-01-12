@@ -1,0 +1,283 @@
+/**
+ * Admin Dashboard Styles
+ * CampusX - College Management System
+ */
+
+/* ==================== ADMIN LAYOUT ==================== */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ==================== SIDEBAR ==================== */
+.admin-sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar .logo {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .logo h2 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.admin-sidebar .logo p {
+    color: #95a5a6;
+    font-size: 0.875rem;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: 1rem 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #34495e;
+    color: #3498db;
+    border-left: 3px solid #3498db;
+}
+
+.sidebar-nav a i {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.admin-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+}
+
+/* Top Header */
+.admin-header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-user-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.admin-user-role {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+}
+
+/* Main Body */
+.admin-body {
+    padding: 2rem;
+}
+
+/* ==================== DASHBOARD STATS ==================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card.blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card.green {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-card.orange {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-card.red {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.stat-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.stat-card-icon {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.stat-card-title {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card-footer {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* ==================== DATA SECTION ==================== */
+.data-section {
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-icon.edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-icon.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-icon.view {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-icon:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+    
+    .admin-sidebar.active {
+        width: 250px;
+    }
+    
+    .admin-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .admin-body {
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

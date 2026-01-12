@@ -1,0 +1,316 @@
+/**
+ * Teacher Dashboard Styles
+ * CampusX - College Management System
+ */
+
+/* ==================== TEACHER DASHBOARD ==================== */
+.teacher-dashboard {
+    background-color: #f8f9fa;
+}
+
+/* ==================== COURSE CARDS ==================== */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.course-card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+}
+
+.course-code {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-bottom: 0.25rem;
+}
+
+.course-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-semester {
+    font-size: 0.875rem;
+    opacity: 0.85;
+}
+
+.course-card-body {
+    padding: 1.5rem;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.course-info-item {
+    text-align: center;
+}
+
+.course-info-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.course-info-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.course-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+/* ==================== ATTENDANCE SECTION ==================== */
+.attendance-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.attendance-date {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.attendance-date input[type="date"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.student-list {
+    list-style: none;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.student-item:hover {
+    background-color: #f8f9fa;
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.student-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.student-details h4 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.student-roll {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.attendance-status {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.status-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.status-btn.present {
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.status-btn.present.active {
+    background-color: #27ae60;
+    color: white;
+}
+
+.status-btn.absent {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.status-btn.absent.active {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.status-btn.late {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+.status-btn.late.active {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* ==================== ASSIGNMENT SECTION ==================== */
+.assignment-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.file-upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+    border-color: #3498db;
+    background-color: #f8f9fa;
+}
+
+.file-upload-icon {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* ==================== GRADE ENTRY ==================== */
+.grade-entry-table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.grade-input {
+    width: 80px;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.grade-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* ==================== QUICK STATS ==================== */
+.teacher-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quick-stat {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.quick-stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #3498db;
+}
+
+.quick-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.quick-stat-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .attendance-status {
+        flex-wrap: wrap;
+    }
+    
+    .status-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}

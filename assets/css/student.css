@@ -1,0 +1,361 @@
+/**
+ * Student Dashboard Styles
+ * CampusX - College Management System
+ */
+
+/* ==================== STUDENT DASHBOARD ==================== */
+.student-profile-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.student-profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+}
+
+.student-profile-info h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.student-profile-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.student-profile-meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-size: 0.875rem;
+    opacity: 0.85;
+}
+
+.meta-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* ==================== STUDENT CARDS ==================== */
+.student-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.student-info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+}
+
+.student-info-card.attendance {
+    border-left-color: #27ae60;
+}
+
+.student-info-card.assignments {
+    border-left-color: #f39c12;
+}
+
+.student-info-card.results {
+    border-left-color: #e74c3c;
+}
+
+.info-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.info-card-title {
+    font-size: 0.875rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-card-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.info-card-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.info-card-description {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* ==================== ATTENDANCE VIEW ==================== */
+.attendance-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.attendance-progress {
+    margin-bottom: 1.5rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-container {
+    height: 30px;
+    background-color: #e9ecef;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    transition: width 0.3s ease;
+}
+
+.attendance-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.attendance-detail-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.detail-value.present { color: #27ae60; }
+.detail-value.absent { color: #e74c3c; }
+.detail-value.late { color: #f39c12; }
+.detail-value.excused { color: #3498db; }
+
+.detail-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* ==================== ASSIGNMENT CARDS ==================== */
+.assignments-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.assignment-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.assignment-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.assignment-info h3 {
+    font-size: 1.125rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.assignment-meta {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.assignment-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.assignment-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+/* ==================== RESULTS TABLE ==================== */
+.results-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.gpa-display {
+    text-align: right;
+}
+
+.gpa-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.gpa-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #27ae60;
+}
+
+.results-table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.grade-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.grade-badge.A { background-color: #27ae60; color: white; }
+.grade-badge.B { background-color: #3498db; color: white; }
+.grade-badge.C { background-color: #f39c12; color: white; }
+.grade-badge.D { background-color: #e67e22; color: white; }
+.grade-badge.F { background-color: #e74c3c; color: white; }
+
+/* ==================== LEAVE APPLICATION ==================== */
+.leave-form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.date-range {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.leave-history {
+    margin-top: 2rem;
+}
+
+.leave-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leave-dates {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+.status-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .student-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .student-profile-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .student-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .attendance-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .date-range {
+        grid-template-columns: 1fr;
+    }
+    
+    .assignment-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
